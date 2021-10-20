@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./sections/Header";
+import Hero from "./sections/Hero";
+import Services from "./sections/Services";
+import Testimonials from "./sections/Testimonials";
+import Gallery from "./sections/Gallery";
+import Footer from "./sections/Footer";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  //check if the layout is for mobile or desktop
+  useEffect(() => {
+    const getWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
+    if (width >= 832) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+
+    window.addEventListener("resize", getWidth);
+
+    return () => window.removeEventListener("resize", getWidth);
+  }, [width]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Hero />
+      <Services isDesktop={isDesktop} />
+      <Testimonials />
+      <Gallery isDesktop={isDesktop} />
+      <Footer />
+    </main>
   );
 }
 

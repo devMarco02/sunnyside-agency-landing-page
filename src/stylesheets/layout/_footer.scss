@@ -1,0 +1,50 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 2rem;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    @include mq(xxsmall) {
+      width: 300px;
+    }
+    @include mq(wide) {
+      width: 400px;
+    }
+  }
+
+  &__list {
+    width: 160px;
+    display: flex;
+    margin: 4rem 0;
+    justify-content: space-between;
+    @include mq(xxxlarge) {
+      margin: 6rem;
+    }
+    @include mq(wide) {
+      width: 240px;
+    }
+  }
+
+  .logo {
+    width: 170px;
+    height: auto;
+    margin-bottom: 2rem;
+    @include mq(xxxlarge) {
+      margin-bottom: 3rem;
+    }
+    @include mq(wide) {
+      width: 200px;
+    }
+  }
+
+  &__icon {
+    @include mq(wide) {
+      width: 30px;
+      height: auto;
+    }
+  }
+}

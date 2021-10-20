@@ -1,0 +1,196 @@
+body {
+  font-size: 18px;
+  font-family: $ff-primary;
+  @include mq(wide) {
+    font-size: 22px;
+  }
+}
+
+.header {
+  &__contact-btn {
+    text-transform: uppercase;
+    font-family: $ff-secondary;
+    font-size: 16px;
+    color: $very-dark-desaturated-blue;
+    @include mq(large) {
+      font-size: 14px;
+    }
+    @include mq(xxxlarge) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    color: $dark-grayish-blue;
+    font-size: 20px;
+    @include mq(large) {
+      font-size: 18px;
+      color: white;
+    }
+  }
+}
+
+.hero {
+  &__title {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $ff-secondary;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    line-height: 1.3em;
+    @include mq(xxsmall) {
+      font-size: 38px;
+    }
+    @include mq(xsmall) {
+      font-size: 46px;
+    }
+    @include mq(small) {
+      font-size: 52px;
+    }
+    @include mq(xwide) {
+      font-size: 60px;
+    }
+  }
+}
+
+.services {
+  &__text {
+    text-align: center;
+    @include mq(large) {
+      text-align: start;
+    }
+
+    &--cyan {
+      .services__service-title,
+      .services__service-body {
+        text-align: center;
+        color: $dark-desaturated-cyan !important;
+      }
+    }
+
+    &--blue {
+      .services__service-title,
+      .services__service-body {
+        text-align: center;
+        color: $dark-blue !important;
+      }
+    }
+  }
+
+  &__service-title,
+  &__service-btn {
+    font-weight: 900;
+    color: $very-dark-desaturated-blue;
+    font-family: $ff-secondary;
+  }
+
+  &__service-title {
+    font-size: 2rem;
+    @include mq(small) {
+      font-size: 2.5rem;
+    }
+    @include mq(large) {
+      font-size: 1.75rem;
+    }
+    @include mq(xlarge) {
+      font-size: 2.25rem;
+    }
+    @include mq(xxxlarge) {
+      font-size: 2.5rem;
+    }
+    @include mq(wide) {
+      font-size: 3.5rem;
+    }
+
+    &--smaller {
+      font-size: 1.8rem;
+      @include mq(large) {
+        font-size: 1.5rem;
+      }
+      @include mq(xlarge) {
+        font-size: 1.8rem;
+      }
+      @include mq(wide) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__service-body {
+    color: $dark-grayish-blue;
+    line-height: 1.6em;
+
+    &--smaller {
+      font-size: 16px;
+      @include mq(wide) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__service-btn {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    @include mq(wide) {
+      font-size: 20px;
+    }
+  }
+}
+
+.testimonials {
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $ff-secondary;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: $grayish-blue;
+    @include mq(xxxlarge) {
+      font-size: 21px;
+    }
+    @include mq(wide) {
+      font-size: 28px;
+    }
+  }
+
+  &__body {
+    line-height: 1.6em;
+    color: $very-dark-grayish-blue;
+  }
+
+  &__name {
+    font-family: $ff-secondary;
+    font-weight: 900;
+    color: $very-dark-desaturated-blue;
+  }
+
+  &__job {
+    font-size: 14px;
+    color: $grayish-blue;
+    @include mq(wide) {
+      font-size: 18px;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+
+  &__nav-link {
+    color: $dark-moderate-cyan;
+  }
+
+  .attribution {
+    font-size: 12px;
+    @include mq(xxxlarge) {
+      font-size: 14px;
+    }
+    @include mq(wide) {
+      font-size: 16px;
+    }
+  }
+}

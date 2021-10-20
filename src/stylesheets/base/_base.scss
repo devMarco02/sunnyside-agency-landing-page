@@ -1,0 +1,157 @@
+$img: "./../../images/mobile/image-header.jpg";
+$imgDesk: "./../../images/desktop/image-header.jpg";
+//services
+$graphicsImg: "./../../images/mobile/image-graphic-design.jpg";
+$photographyImg: "./../../images/mobile/image-photography.jpg";
+$graphicsImgDesk: "./../../images/desktop/image-graphic-design.jpg";
+$photographyImgDesk: "./../../images/desktop/image-photography.jpg";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+main {
+  border: solid 1px black;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  .logo,
+  &__hamburger {
+    cursor: pointer;
+  }
+
+  &__contact-btn {
+    cursor: pointer;
+    transition: all 0.1s linear;
+    @include on-event {
+      background: rgba(250, 212, 0, 0.7);
+      @include mq(large) {
+        background: rgba(255, 255, 255, 0.25);
+        color: white;
+      }
+    }
+  }
+}
+
+.hero {
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  @include mq(large) {
+    background-image: url($imgDesk);
+  }
+}
+
+.services {
+  &__service {
+    &--graphics,
+    &--photography {
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &--graphics {
+      background-image: url($graphicsImg);
+      @include mq(large) {
+        background-image: url($graphicsImgDesk);
+      }
+    }
+
+    &--photography {
+      background-image: url($photographyImg);
+      @include mq(large) {
+        background-image: url($photographyImgDesk);
+      }
+    }
+  }
+
+  &__service-btn {
+    position: relative;
+    cursor: pointer;
+    @include on-event {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: -3px;
+      left: -5px;
+      right: -5px;
+      height: 8px;
+      border-radius: 4px;
+      opacity: 0.25;
+      transition: all 0.1s linear;
+    }
+
+    &--yellow::after {
+      background: $yellow;
+    }
+
+    &--pink::after {
+      background: $soft-red;
+    }
+  }
+}
+
+.footer {
+  background: #90d4c5;
+
+  .logo {
+    cursor: pointer;
+
+    path {
+      fill: #2c7566;
+    }
+  }
+
+  &__nav-link {
+    transition: all 0.1s linear;
+    @include on-event {
+      color: white;
+    }
+  }
+
+  &__link {
+    @include on-event {
+      .footer__icon path {
+        fill: white;
+      }
+    }
+
+    .footer__icon path {
+      transition: all 0.1s linear;
+    }
+  }
+
+  .attribution a {
+    transition: all 0.1s linear;
+    @include on-event {
+      color: white;
+    }
+  }
+}
