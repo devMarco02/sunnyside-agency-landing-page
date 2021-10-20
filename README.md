@@ -23,12 +23,21 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./src/images/screenshot/Desk1.png)
+![](./src/images/screenshot/Desk2.png)
+![](./src/images/screenshot/Desk3.png)
+![](./src/images/screenshot/Desk4.png)
+![](./src/images/screenshot/Desk5.png)
+![](./src/images/screenshot/Mobile1.png)
+![](./src/images/screenshot/Mobile2.png)
+![](./src/images/screenshot/Mobile3.png)
+![](./src/images/screenshot/Mobile4.png)
+![](./src/images/screenshot/Mobile5.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-react-and-sass-fGuD4z081](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-react-and-sass-fGuD4z081)
+- Live Site URL: [https://devmarco02-sunnyside-agency.netlify.app/](https://devmarco02-sunnyside-agency.netlify.app/)
 
 ## My process
 
